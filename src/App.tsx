@@ -7,20 +7,40 @@ import Schedule from './pages/Schedule';
 import Pricing from './pages/Pricing';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
+import Dashboard from './pages/Dashboard';
+import ProtectedRoute from './components/auth/ProtectedRoute';
+import { AuthProvider } from './context/AuthContext';
+
+import DiagnosticTest from './pages/DiagnosticTest';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path="tentang-kami" element={<About />} />
-        <Route path="program" element={<Programs />} />
-        <Route path="jadwal" element={<Schedule />} />
-        <Route path="biaya" element={<Pricing />} />
-        <Route path="galeri" element={<Gallery />} />
-        <Route path="kontak" element={<Contact />} />
-      </Route>
-    </Routes>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          <Route path="tentang-kami" element={<About />} />
+          <Route path="program" element={<Programs />} />
+          <Route path="jadwal" element={<Schedule />} />
+          <Route path="biaya" element={<Pricing />} />
+          <Route path="galeri" element={<Gallery />} />
+          <Route path="kontak" element={<Contact />} />
+          <Route path="tes-diagnostik" element={<DiagnosticTest />} />
+          <Route path="login" element={<Login />} />
+          <Route path="register" element={<Register />} />
+          <Route 
+            path="dashboard" 
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } 
+          />
+        </Route>
+      </Routes>
+    </AuthProvider>
   );
 }
 

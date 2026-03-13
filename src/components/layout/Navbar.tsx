@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, BookOpen } from 'lucide-react';
+import { Menu, X, BookOpen, User, LogOut } from 'lucide-react';
+import { useAuth } from '../../context/AuthContext';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { user, signOut } = useAuth();
 
   const navLinks = [
     { name: 'Beranda', path: '/' },
@@ -38,9 +40,24 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
-          <a href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan,%20saya%20ingin%20mendaftar%20untuk%20anak%20saya..." target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-cta">
-            Daftar
-          </a>
+          
+          <div style={{ display: 'flex', gap: 'var(--space-2)', alignItems: 'center' }}>
+            {user ? (
+              <>
+                <Link to="/dashboard" className={`nav-link ${location.pathname === '/dashboard' ? 'active' : ''}`} style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+                  <User size={18} /> Dashboard
+                </Link>
+                <button onClick={() => signOut()} className="btn btn-outline" style={{ padding: '8px', minWidth: 'auto', border: 'none' }} title="Keluar">
+                  <LogOut size={18} color="#B91C1C" />
+                </button>
+              </>
+            ) : (
+              <Link to="/login" className="nav-link">Login</Link>
+            )}
+            <a href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan,%20saya%20ingin%20mendaftar%20untuk%20anak%20saya..." target="_blank" rel="noopener noreferrer" className="btn btn-primary nav-cta">
+              Daftar
+            </a>
+          </div>
         </div>
 
         {/* Mobile Toggle */}
@@ -67,9 +84,20 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-full mt-4" onClick={closeMenu}>
-              Daftar Sekarang
-            </a>
+            
+            <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--space-2)', marginTop: 'var(--space-4)' }}>
+              {user ? (
+                <>
+                  <Link to="/dashboard" className="mobile-nav-link" onClick={closeMenu}>Dashboard</Link>
+                  <button onClick={() => { signOut(); closeMenu(); }} className="btn btn-outline w-full" style={{ justifyContent: 'center' }}>Keluar</button>
+                </>
+              ) : (
+                <Link to="/login" className="mobile-nav-link" onClick={closeMenu}>Login</Link>
+              )}
+              <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="btn btn-primary w-full" onClick={closeMenu}>
+                Daftar Sekarang
+              </a>
+            </div>
           </div>
         </div>
       )}
