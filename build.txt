@@ -1,0 +1,7 @@
+
+> bimbel_nia@0.0.0 build
+> tsc -b && vite build
+
+src/pages/Contact.tsx(1,25): error TS6133: 'Mail' is declared but its value is never read.
+src/pages/Contact.tsx(2,1): error TS6133: 'CTASection' is declared but its value is never read.
+src/pages/Gallery.tsx(43,19): error TS2353: Object literal may only specify known properties, and 'group' does not exist in type 'Properties<string | number, string & {}>'.
