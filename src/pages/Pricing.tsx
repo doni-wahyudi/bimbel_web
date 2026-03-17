@@ -1,5 +1,6 @@
 import { CheckCircle2, Star } from 'lucide-react';
 import CTASection from '../components/home/CTASection';
+import './Pricing.css';
 
 const Pricing = () => {
   const packages = [
@@ -52,71 +53,44 @@ const Pricing = () => {
 
   return (
     <div className="pricing-page animate-fade-in">
-      <section className="section bg-primary text-white text-center pb-24">
+      <section className="page-header-tech">
         <div className="container">
-          <h1 className="section-title text-white">Biaya & Paket Belajar</h1>
-          <p className="section-subtitle text-white/80" style={{ marginBottom: 0 }}>
+          <h1 className="tech-heading-lg text-gradient-cyan">Biaya & Paket Belajar</h1>
+          <p className="page-subtitle-tech">
             Pilih paket yang paling sesuai dengan kebutuhan belajar anak Anda.
           </p>
         </div>
       </section>
 
-      <section className="section" style={{ marginTop: '-80px', paddingTop: 0 }}>
+      <section className="section" style={{ paddingTop: 0 }}>
         <div className="container">
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: 'var(--space-8)',
-            alignItems: 'center'
-          }}>
+          <div className="pricing-grid-tech">
             {packages.map((pkg, i) => (
               <div 
                 key={i}
-                className={`glass ${pkg.recommended ? 'recommended-pkg' : ''}`}
-                style={{
-                  position: 'relative',
-                  padding: 'var(--space-8)',
-                  borderRadius: 'var(--radius-lg)',
-                  background: 'var(--surface)',
-                  border: pkg.recommended ? '2px solid var(--secondary)' : '1px solid var(--border)',
-                  boxShadow: pkg.recommended ? 'var(--shadow-xl)' : 'var(--shadow-md)',
-                  transform: pkg.recommended ? 'scale(1.05)' : 'none',
-                  zIndex: pkg.recommended ? 10 : 1
-                }}
+                className={`pricing-card-tech ${pkg.recommended ? 'recommended' : ''}`}
               >
                 {pkg.recommended && (
-                  <div style={{
-                    position: 'absolute',
-                    top: '-16px',
-                    left: '50%',
-                    transform: 'translateX(-50%)',
-                    background: 'var(--secondary)',
-                    color: 'white',
-                    padding: '4px 16px',
-                    borderRadius: '20px',
-                    fontSize: '0.875rem',
-                    fontWeight: 'bold',
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '4px'
-                  }}>
-                    <Star size={14} fill="white" /> Most Popular
+                  <div className="badge-popular">
+                    <Star size={14} fill="#020617" color="#020617" /> Most Popular
                   </div>
                 )}
                 
-                <h3 style={{ fontSize: '1.5rem', marginBottom: '8px', color: 'var(--text-main)', textAlign: 'center' }}>{pkg.name}</h3>
-                <p style={{ color: 'var(--text-muted)', fontSize: '0.9rem', textAlign: 'center', marginBottom: 'var(--space-6)' }}>{pkg.subtitle}</p>
+                <h3 className="pricing-name">{pkg.name}</h3>
+                <p className="pricing-subtitle">{pkg.subtitle}</p>
                 
-                <div style={{ textAlign: 'center', marginBottom: 'var(--space-8)', paddingBottom: 'var(--space-6)', borderBottom: '1px solid var(--border)' }}>
-                  <span style={{ fontSize: '2rem', fontWeight: 800, color: 'var(--primary-dark)' }}>{pkg.price}</span>
-                  <span style={{ color: 'var(--text-muted)' }}>{pkg.period}</span>
+                <div className="pricing-amount-box">
+                  <span className="pricing-amount">{pkg.price}</span>
+                  <span className="pricing-period">{pkg.period}</span>
                 </div>
                 
-                <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 var(--space-8) 0' }}>
+                <ul className="pricing-features">
                   {pkg.features.map((feat, idx) => (
-                    <li key={idx} style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px', color: 'var(--text-main)' }}>
-                      <CheckCircle2 size={20} color={pkg.recommended ? 'var(--secondary)' : 'var(--primary-light)'} />
-                      <span style={{ fontSize: '0.95rem' }}>{feat}</span>
+                    <li key={idx}>
+                      <div className="feature-icon-wrapper">
+                        <CheckCircle2 size={20} />
+                      </div>
+                      <span>{feat}</span>
                     </li>
                   ))}
                 </ul>
@@ -126,8 +100,8 @@ const Pricing = () => {
                     href={`https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20mendaftar%20${pkg.name}...`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`btn w-full ${pkg.recommended ? 'btn-secondary' : 'btn-outline'}`}
-                    style={{ width: '100%', justifyContent: 'center' }}
+                    className={`btn-pill-primary`}
+                    style={{ width: '100%', padding: '1rem', background: pkg.recommended ? '' : 'rgba(255, 255, 255, 0.05)', color: pkg.recommended ? '' : '#fff', border: pkg.recommended ? '' : '1px solid rgba(255, 255, 255, 0.2)', boxShadow: pkg.recommended ? '' : 'none' }}
                   >
                     Pilih Paket
                   </a>
@@ -136,21 +110,14 @@ const Pricing = () => {
             ))}
           </div>
           
-          <div style={{ marginTop: 'var(--space-12)', textAlign: 'center', background: 'var(--primary-light)', color: 'white', padding: 'var(--space-6)', borderRadius: 'var(--radius-lg)' }}>
-            <h3 style={{ marginBottom: '8px' }}>🚀 Promo Spesial Bulan Ini!</h3>
+          <div className="promo-banner-tech">
+            <h3>🚀 Promo Spesial Bulan Ini!</h3>
             <p>Dapatkan diskon 30% biaya pendaftaran untuk 50 siswa pertama yang mendaftar bulan ini.</p>
           </div>
         </div>
       </section>
 
       <CTASection />
-
-      {/* Internal CSS for scale reset on mobile */}
-      <style>{`
-        @media (max-width: 768px) {
-          .recommended-pkg { transform: scale(1) !important; }
-        }
-      `}</style>
     </div>
   );
 };

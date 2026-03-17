@@ -16,9 +16,9 @@ const CTASection = () => {
                 href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan,%20saya%20ingin%20mendaftar%20Tes%20Diagnostik%20Gratis..." 
                 target="_blank" 
                 rel="noopener noreferrer" 
-                className="btn btn-secondary btn-lg"
+                className="btn-pill-primary"
               >
-                Daftar Tes Diagnostik <ArrowRight size={20} />
+                Daftar Tes Diagnostik <ArrowRight size={20} className="btn-icon" />
               </a>
               <span className="cta-note">*Terbatas untuk 50 pendaftar pertama bulan ini</span>
             </div>

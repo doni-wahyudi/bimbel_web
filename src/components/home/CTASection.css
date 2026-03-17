@@ -4,12 +4,12 @@
 
 .cta-box {
   position: relative;
-  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  background: linear-gradient(135deg, var(--surface), var(--background));
   border-radius: var(--radius-lg);
   padding: var(--space-12) var(--space-6);
   overflow: hidden;
-  box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(30, 208, 207, 0.2);
 }
 
 @media (min-width: 768px) {

@@ -1,0 +1,123 @@
+.schedule-page {
+  background-color: var(--background);
+  min-height: 100vh;
+}
+
+.page-header-tech {
+  padding: 140px 0 80px 0;
+  background: radial-gradient(circle at top right, var(--surface) 0%, var(--background) 100%);
+  position: relative;
+  text-align: center;
+}
+
+.tech-heading-lg {
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: var(--space-6);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .tech-heading-lg {
+    font-size: 3.5rem;
+  }
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #1ed0cf 0%, #0ea5e9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-subtitle-tech {
+  font-size: 1.25rem;
+  color: var(--text-light);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.table-glass-container {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(30, 208, 207, 0.2);
+  border-radius: 20px;
+  padding: var(--space-8);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.table-title-tech {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+  color: #FFFFFF;
+}
+
+.tech-table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  background: rgba(10, 61, 82, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+  color: var(--text-muted);
+}
+
+.tech-table th {
+  padding: 16px;
+  text-align: left;
+  background: rgba(30, 208, 207, 0.15);
+  color: #1ed0cf;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  border-bottom: 2px solid rgba(30, 208, 207, 0.3);
+}
+
+.tech-table th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.tech-table th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.tech-table td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-table tr:last-child td {
+  border-bottom: none;
+}
+
+.tech-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.day-cell-tech {
+  font-weight: 600;
+  color: #FFFFFF;
+}
+
+.schedule-note-tech {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  background: rgba(30, 208, 207, 0.05);
+  border: 1px dashed rgba(30, 208, 207, 0.3);
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  color: var(--text-light);
+}
+
+.schedule-note-tech strong {
+  color: #1ed0cf;
+}
