@@ -191,19 +191,14 @@ img {
 }
 
 /* Responsive Hide Utilities */
-.hidden-mobile {
-  display: none;
-}
-@media (min-width: 768px) {
+/* Responsive Hide Utilities */
+@media (max-width: 991px) {
   .hidden-mobile {
-    display: block; /* or flex, base on usage */
+    display: none !important;
   }
 }
-.hidden-desktop {
-  display: block;
-}
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .hidden-desktop {
-    display: none;
+    display: none !important;
   }
 }

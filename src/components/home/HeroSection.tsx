@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles, Trophy, Users } from 'lucide-react';
+import { ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import studentImage from '../../assets/student_image.png';
 import './HeroSection.css';
@@ -20,10 +20,12 @@ const HeroSection = () => {
           </div>
 
           <h1 className="hero-title-tech">
-            <span className="font-light">Mencetak Anak</span>
-            <span className="font-bold text-gradient-cyan">Berprestasi</span>
-            <span className="font-light">&</span>
-            <span className="font-bold">Berkarakter</span>
+            <span className="font-light block-text">Mencetak Anak</span>
+            <span className="block-text">
+              <span className="font-bold text-gradient-cyan">Berprestasi</span>
+              <span className="font-light" style={{ display: 'inline-block', marginLeft: '16px', color: '#fff' }}>&</span>
+            </span>
+            <span className="font-bold block-text">Berkarakter</span>
           </h1>
           
           <p className="hero-description-tech">
@@ -47,27 +49,6 @@ const HeroSection = () => {
         
         <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '200ms' }}>
           <img src={studentImage} alt="Siswa Teladan" className="hero-student-img" />
-          
-          {/* Enhanced Floating Cards */}
-          <div className="floating-card glass tech-card-1">
-            <div className="card-icon-wrapper cyan-bg">
-              <Trophy size={22} color="#000" />
-            </div>
-            <div className="card-text-tech">
-              <strong>100%</strong>
-              <span>Lulus Seleksi PTN</span>
-            </div>
-          </div>
-          
-          <div className="floating-card glass tech-card-2">
-            <div className="card-icon-wrapper white-bg">
-              <Users size={22} className="text-cyan" />
-            </div>
-            <div className="card-text-tech">
-              <strong>8:1</strong>
-              <span>Rasio Kelas Eksklusif</span>
-            </div>
-          </div>
         </div>
       </div>
     </section>

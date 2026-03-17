@@ -114,7 +114,7 @@
   letter-spacing: -0.02em;
 }
 
-.hero-title-tech span {
+.hero-title-tech .block-text {
   display: block;
 }
 
@@ -236,13 +236,13 @@
 }
 
 .hero-student-img {
-  width: 140%; /* Artificially enlarge beyond the 50% grid bounds */
+  width: 160%; /* Enlarge image */
   height: auto;
-  min-width: 650px;
-  max-width: 900px; /* Give it plenty of room to grow */
-  margin-right: -20%; /* Shift it right so it overflows elegantly */
+  min-width: 750px;
+  max-width: 1100px;
+  margin-right: -25%; 
   object-fit: contain;
-  align-self: flex-end; /* Still perfectly anchors bottom to the baseline */
+  align-self: flex-end;
   filter: drop-shadow(-10px 20px 40px rgba(0, 0, 0, 0.6));
   display: block;
 }
@@ -261,7 +261,6 @@
   -webkit-backdrop-filter: blur(16px);
   z-index: 5;
   pointer-events: auto;
-  animation: floatCard 6s ease-in-out infinite;
 }
 
 /* Position cards relative to the image wrapper */

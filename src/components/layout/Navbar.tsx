@@ -41,41 +41,44 @@ const Navbar = () => {
           <span className="brand-text-tech">Siswa Teladan</span>
         </Link>
 
-        {/* Center Links (Desktop) */}
-        <div className="nav-links-center hidden-mobile">
-          {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={`nav-link-tech ${location.pathname === link.path ? 'active' : ''}`}
-            >
-              {link.name}
-            </Link>
-          ))}
-        </div>
+        {/* Desktop Menu Wrapper */}
+        <div className="desktop-menu-wrapper hidden-mobile">
+          {/* Center Links */}
+          <div className="nav-links-center">
+            {navLinks.map((link) => (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={`nav-link-tech ${location.pathname === link.path ? 'active' : ''}`}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
 
-        {/* Right CTA (Desktop) */}
-        <div className="nav-right hidden-mobile">
-            {user ? (
-              <div className="nav-user-actions">
-                <Link to="/dashboard" className="nav-link-tech active flex-center gap-2">
-                  <User size={16} /> Dashboard
-                </Link>
-                <button onClick={() => signOut()} className="btn-icon-danger" title="Keluar">
-                  <LogOut size={18} />
-                </button>
-              </div>
-            ) : (
-              <Link to="/login" className="nav-link-tech">Login</Link>
-            )}
-            <a 
-              href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan..." 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="btn-pill-cyan-sm"
-            >
-              Daftar Kelas
-            </a>
+          {/* Right CTA */}
+          <div className="nav-right">
+              {user ? (
+                <div className="nav-user-actions">
+                  <Link to="/dashboard" className="nav-link-tech active flex-center gap-2">
+                    <User size={16} /> Dashboard
+                  </Link>
+                  <button onClick={() => signOut()} className="btn-icon-danger" title="Keluar">
+                    <LogOut size={18} />
+                  </button>
+                </div>
+              ) : (
+                <Link to="/login" className="nav-link-tech">Login</Link>
+              )}
+              <a 
+                href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan..." 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="btn-pill-cyan-sm"
+              >
+                Daftar Kelas
+              </a>
+          </div>
         </div>
 
         {/* Mobile Toggle */}

@@ -78,7 +78,7 @@
 }
 
 .program-card:hover .program-link {
-  color: var(--secondary);
+  color: #38bdf8;
 }
 
 .program-link svg {

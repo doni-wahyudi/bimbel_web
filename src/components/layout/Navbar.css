@@ -50,7 +50,13 @@
   letter-spacing: -0.02em;
 }
 
-/* Center Links */
+/* Center Links & Right Wrapper */
+.desktop-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
 .nav-links-center {
   display: flex;
   align-items: center;
