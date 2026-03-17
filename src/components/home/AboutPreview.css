@@ -1,3 +1,10 @@
+.about-tech-theme {
+  position: relative;
+  background-color: var(--background);
+  color: var(--text-main);
+  overflow: hidden;
+}
+
 .about-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -7,7 +14,7 @@
 
 @media (min-width: 992px) {
   .about-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: var(--space-16);
   }
 }
@@ -24,109 +31,142 @@
   margin: 0 auto;
 }
 
-.about-pattern-1 {
+.about-glow-effect {
   position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 150px;
-  height: 150px;
-  background-image: radial-gradient(var(--primary-light) 2px, transparent 2px);
-  background-size: 20px 20px;
-  opacity: 0.3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(14, 165, 233, 0.15) 0%, transparent 70%);
   z-index: 0;
-}
-
-.about-pattern-2 {
-  position: absolute;
-  bottom: -30px;
-  right: -30px;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background-color: var(--secondary-light);
-  opacity: 0.1;
-  z-index: 0;
+  pointer-events: none;
 }
 
 .about-main-image {
   position: relative;
-  aspect-ratio: 4/5;
   border-radius: 24px;
   overflow: hidden;
   z-index: 1;
-  box-shadow: var(--shadow-xl);
 }
 
-.image-placeholder {
+.glass-panel {
+  background: rgba(15, 23, 42, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12px);
+  padding: 12px; /* Pad the image inside the panel */
+}
+
+.about-img-full {
   width: 100%;
-  height: 100%;
-  opacity: 0.1;
+  height: auto;
+  border-radius: 16px;
+  object-fit: cover;
+  display: block;
 }
 
-.experience-badge {
+.glass-card-tech {
   position: absolute;
-  bottom: 10%;
-  left: -10%;
-  padding: var(--space-4);
-  border-radius: var(--radius-lg);
+  bottom: -20px;
+  right: -20px;
+  padding: 16px 20px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
-  gap: var(--space-3);
+  gap: 16px;
   z-index: 2;
-  box-shadow: var(--shadow-lg);
-  background: rgba(255, 255, 255, 0.95);
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(30, 208, 207, 0.2);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-.exp-number {
-  font-size: 2.5rem;
+.exp-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(30, 208, 207, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exp-text-tech {
+  display: flex;
+  flex-direction: column;
+}
+
+.exp-text-tech strong {
+  font-size: 1.5rem;
   font-weight: 800;
-  font-family: var(--font-heading);
-}
-
-.exp-text {
-  font-size: 0.875rem;
-  font-weight: 500;
+  color: #FFFFFF;
   line-height: 1.2;
 }
 
-.text-left {
-  text-align: left;
-  margin-bottom: var(--space-6);
+.exp-text-tech span {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #94A3B8;
 }
 
-.about-description {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  line-height: 1.8;
+.tech-heading {
+  color: #FFFFFF;
+  font-size: 2.5rem;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 768px) {
+  .tech-heading {
+    font-size: 3rem;
+  }
+}
+
+.about-description-tech {
+  font-size: 1.1rem;
+  color: #CBD5E1;
+  line-height: 1.7;
   margin-bottom: var(--space-8);
 }
 
-.benefit-list {
+.benefit-list-tech {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4);
+  gap: 20px;
   margin-bottom: var(--space-8);
+  padding: 0;
 }
 
 @media (min-width: 640px) {
-  .benefit-list {
+  .benefit-list-tech {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-.benefit-item {
+.benefit-item-tech {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3);
+  gap: 12px;
+  color: #F1F5F9;
+  font-weight: 500;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.benefit-icon {
+.benefit-icon-wrapper {
   flex-shrink: 0;
   margin-top: 2px;
+  background: rgba(30, 208, 207, 0.1);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.mt-8 {
-  margin-top: var(--space-8);
+.inline-block {
+  display: inline-flex;
 }

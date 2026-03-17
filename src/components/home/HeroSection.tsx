@@ -1,28 +1,33 @@
-import { ArrowRight, BookOpen, Users, Trophy } from 'lucide-react';
+import { ArrowRight, Sparkles, Trophy, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import studentImage from '../../assets/student_image.png';
 import './HeroSection.css';
 
 const HeroSection = () => {
   return (
-    <section className="hero-section">
-      <div className="hero-background">
-        <div className="blob blob-1"></div>
-        <div className="blob blob-2"></div>
-      </div>
+    <section className="hero-section hero-tech-theme">
+      {/* Animated Background Elements */}
+      <div className="hero-glow-layer primary-glow"></div>
+      <div className="hero-glow-layer secondary-glow"></div>
+      <div className="noise-overlay"></div>
       
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
-          <div className="badge glass">
-            <span className="badge-dot"></span>
-            Pendaftaran Tahun Ajaran Baru Telah Dibuka
-          </div>
           
-          <h1 className="hero-title">
-            Tempat Anak <span className="text-secondary">Berprestasi</span> dan Berkarakter
+          <div className="glass-badge">
+            <Sparkles size={16} className="text-cyan animate-pulse" />
+            <span>Pendaftaran 2026 Dibuka</span>
+          </div>
+
+          <h1 className="hero-title-tech">
+            <span className="font-light">Mencetak Anak</span>
+            <span className="font-bold text-gradient-cyan">Berprestasi</span>
+            <span className="font-light">&</span>
+            <span className="font-bold">Berkarakter</span>
           </h1>
           
-          <p className="hero-description">
-            Bimbingan belajar SD, SMP, SMA dengan metode efektif, kelas interaktif, dan guru berpengalaman yang siap mengantarkan anak Anda meraih mimpi.
+          <p className="hero-description-tech">
+            Lembaga bimbingan belajar eksklusif dengan metode interaktif, dibimbing oleh pengajar tersertifikasi untuk memastikan masa depan cerah putra-putri Anda.
           </p>
           
           <div className="hero-cta-group">
@@ -30,53 +35,37 @@ const HeroSection = () => {
               href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan,%20saya%20ingin%20Konsultasi%20Gratis..." 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn btn-primary btn-lg"
+              className="btn-pill-primary"
             >
-              Konsultasi Gratis <ArrowRight size={20} />
+              Mulai Konsultasi <ArrowRight size={18} className="btn-icon" />
             </a>
-            <Link to="/program" className="btn btn-outline btn-lg glass">
-              Lihat Program
+            <Link to="/program" className="btn-pill-glass">
+              Eksplor Program
             </Link>
-          </div>
-          
-          <div className="hero-features">
-            <div className="feature-item">
-              <Users size={20} className="feature-icon" />
-              <span>Kelas Kecil (Maks 8 Siswa)</span>
-            </div>
-            <div className="feature-item">
-              <BookOpen size={20} className="feature-icon" />
-              <span>Metode Fun Learning</span>
-            </div>
-            <div className="feature-item">
-              <Trophy size={20} className="feature-icon" />
-              <span>Guru Bersertifikasi</span>
-            </div>
           </div>
         </div>
         
         <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '200ms' }}>
-          <div className="hero-image-container glass">
-            {/* Placeholder for an actual image */}
-            <div className="hero-image-placeholder"></div>
-            
-            <div className="floating-card card-1 glass">
-              <div className="card-icon bg-secondary">
-                <Trophy size={24} color="white" />
-              </div>
-              <div className="card-text">
-                <strong>100%</strong>
-                <span>Lulus SBMPTN/SNBT</span>
-              </div>
+          <img src={studentImage} alt="Siswa Teladan" className="hero-student-img" />
+          
+          {/* Enhanced Floating Cards */}
+          <div className="floating-card glass tech-card-1">
+            <div className="card-icon-wrapper cyan-bg">
+              <Trophy size={22} color="#000" />
             </div>
-            <div className="floating-card card-2 glass">
-              <div className="card-icon bg-accent">
-                <Users size={24} color="white" />
-              </div>
-              <div className="card-text">
-                <strong>500+</strong>
-                <span>Siswa Aktif</span>
-              </div>
+            <div className="card-text-tech">
+              <strong>100%</strong>
+              <span>Lulus Seleksi PTN</span>
+            </div>
+          </div>
+          
+          <div className="floating-card glass tech-card-2">
+            <div className="card-icon-wrapper white-bg">
+              <Users size={22} className="text-cyan" />
+            </div>
+            <div className="card-text-tech">
+              <strong>8:1</strong>
+              <span>Rasio Kelas Eksklusif</span>
             </div>
           </div>
         </div>

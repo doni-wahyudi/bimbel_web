@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap');
 
 :root {
-  /* Colors - Educational Blue Theme with Gold Accents */
-  --primary: #1E3A8A;
-  --primary-light: #2563EB;
-  --primary-dark: #1E40AF;
+  /* Colors - Premium Tech Teal Theme */
+  --primary: #1ed0cf;       /* Bright Cyan */
+  --primary-light: #45e3e2;
+  --primary-dark: #14b8a6;  /* Teal */
   
-  --secondary: #D97706; /* Darkened for better readability against white */
-  --secondary-light: #F59E0B;
-  --secondary-dark: #B45309;
+  --secondary: #0a3d52;     /* Deep Navy Teal from background */
+  --secondary-light: #0c4a60;
+  --secondary-dark: #061a24;
 
-  --accent: #059669; /* Darkened for accessibility */
+  --accent: #0ea5e9;        /* Bright Blue Accent */
   
-  --background: #FAFAF9; /* Warm off-white */
-  --surface: #FFFFFF;
-  --surface-hover: #F3F4F6;
+  --background: #020617;    /* Slate 950 - Very Dark */
+  --surface: #0f172a;       /* Slate 900 - Dark */
+  --surface-hover: #1e293b; /* Slate 800 */
   
-  --text-main: #111827;
-  --text-muted: #4B5563;
-  --text-light: #6B7280; /* Darkened from 9CA3AF to meet contrast ratio */
+  --text-main: #f8fafc;     /* Slate 50 - Off white */
+  --text-muted: #cbd5e1;    /* Slate 300 - Light gray */
+  --text-light: #94a3b8;    /* Slate 400 - Medium gray */
 
-  --border: #E5E7EB;
+  --border: rgba(255, 255, 255, 0.1);
 
   /* Typography */
   --font-heading: 'Outfit', sans-serif;
