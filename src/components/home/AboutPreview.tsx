@@ -1,6 +1,6 @@
 import { CheckCircle2, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import home2 from '../../assets/student/home_2.png';
+import home2 from '../../assets/student/home_2.webp';
 import './AboutPreview.css';
 
 const AboutPreview = () => {

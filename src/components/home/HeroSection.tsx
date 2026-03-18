@@ -1,6 +1,6 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import home1 from '../../assets/student/home_1.png';
+import home1 from '../../assets/student/home_1.webp';
 import './HeroSection.css';
 
 const HeroSection = () => {

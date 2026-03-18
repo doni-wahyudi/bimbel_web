@@ -2,14 +2,14 @@ import CTASection from '../components/home/CTASection';
 import './Gallery.css';
 
 // Import our new AI-generated tech-themed images
-import gallery1 from '../assets/gallery/15-1.png';
-import gallery2 from '../assets/gallery/15-2.png';
-import gallery3 from '../assets/gallery/16-1.png';
-import gallery4 from '../assets/gallery/16-2.png';
-import gallery5 from '../assets/gallery/17-1.png';
-import gallery6 from '../assets/gallery/17-2.png';
-import gallery7 from '../assets/gallery/18-1.png';
-import gallery8 from '../assets/gallery/18-2.png';
+import gallery1 from '../assets/gallery/15-1.webp';
+import gallery2 from '../assets/gallery/15-2.webp';
+import gallery3 from '../assets/gallery/16-1.webp';
+import gallery4 from '../assets/gallery/16-2.webp';
+import gallery5 from '../assets/gallery/17-1.webp';
+import gallery6 from '../assets/gallery/17-2.webp';
+import gallery7 from '../assets/gallery/18-1.webp';
+import gallery8 from '../assets/gallery/18-2.webp';
 
 const Gallery = () => {
   const images = [
@@ -45,6 +45,7 @@ const Gallery = () => {
                   src={img.src} 
                   alt={img.title}
                   className="gallery-img-tech"
+                  loading="lazy"
                 />
                 <div className="gallery-overlay-tech">
                   <span className="gallery-category-tech">

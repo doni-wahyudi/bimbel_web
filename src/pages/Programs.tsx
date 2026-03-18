@@ -88,17 +88,17 @@ const Programs = () => {
                       </ul>
                     </div>
                   </div>
-                  
-                  <div style={{ marginTop: 'var(--space-8)' }}>
-                    <a 
-                      href={`https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20mendaftar%20${prog.title}...`} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="btn-pill-primary inline-flex"
-                    >
-                      Daftar Program Ini
-                    </a>
-                  </div>
+                </div>
+
+                <div style={{ flexBasis: '100%', display: 'flex', justifyContent: 'center', marginTop: 'var(--space-4)' }}>
+                  <a 
+                    href={`https://wa.me/6281234567890?text=Halo%20saya%20tertarik%20mendaftar%20${prog.title}...`} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="btn-pill-primary inline-flex"
+                  >
+                    Daftar Program Ini
+                  </a>
                 </div>
               </div>
             ))}

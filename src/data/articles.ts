@@ -1,6 +1,6 @@
-import img1 from '../assets/article_image/IMG_3864.JPG.jpeg';
-import img2 from '../assets/article_image/IMG_3865.JPG.jpeg';
-import img3 from '../assets/article_image/IMG_3867.JPG.jpeg';
+import img1 from '../assets/article_image/IMG_3864.JPG.webp';
+import img2 from '../assets/article_image/IMG_3865.JPG.webp';
+import img3 from '../assets/article_image/IMG_3867.JPG.webp';
 
 export interface Article {
   id: string;

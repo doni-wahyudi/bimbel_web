@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 import MainLayout from './components/layout/MainLayout';
+import ScrollToTop from './components/layout/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Programs from './pages/Programs';
@@ -20,6 +21,7 @@ import DiagnosticTest from './pages/DiagnosticTest';
 function App() {
   return (
     <AuthProvider>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
