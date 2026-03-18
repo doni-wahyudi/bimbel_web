@@ -25,6 +25,7 @@ const Navbar = () => {
     { name: 'Jadwal', path: '/jadwal' },
     { name: 'Biaya', path: '/biaya' },
     { name: 'Galeri', path: '/galeri' },
+    { name: 'Artikel', path: '/artikel' },
   ];
 
   const closeMenu = () => setIsOpen(false);

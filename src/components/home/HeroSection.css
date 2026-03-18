@@ -1,6 +1,6 @@
 .hero-tech-theme {
   position: relative;
-  min-height: calc(100vh - 80px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;

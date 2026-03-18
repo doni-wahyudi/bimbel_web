@@ -8,8 +8,8 @@ const About = () => {
       {/* Header Section */}
       <section className="about-header-section">
         <div className="container">
-          <h1 className="tech-heading-lg text-gradient-cyan text-center">Tentang Siswa Teladan</h1>
-          <p className="about-subtitle text-center">
+          <h1 className="tech-heading-lg text-gradient-cyan">Tentang Siswa Teladan</h1>
+          <p className="about-subtitle">
             Membangun generasi cerdas, berkarakter, dan siap menghadapi tantangan masa depan.
           </p>
         </div>

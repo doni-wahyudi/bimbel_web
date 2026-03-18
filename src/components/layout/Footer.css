@@ -89,15 +89,14 @@
 .footer-contact-info li {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-3);
+  gap: var(--space-4); /* Increased gap */
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.5;
 }
 
 .contact-icon {
-  color: var(--secondary);
+  color: var(--primary);
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
 .footer-bottom {

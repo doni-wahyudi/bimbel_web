@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, MapPin, Phone, Mail, Instagram } from 'lucide-react';
+import { BookOpen, MapPin, Phone, Mail } from 'lucide-react';
+import { FaInstagram, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -15,9 +16,9 @@ const Footer = () => {
             Bimbingan belajar SD, SMP, SMA dengan metode efektif dan guru berpengalaman. Tempat Anak Berprestasi dan Berkarakter.
           </p>
           <div className="social-links">
-            <a href="#" aria-label="Instagram"><Instagram /></a>
-            <a href="#" aria-label="Email"><Mail /></a>
-            <a href="#" aria-label="WhatsApp"><Phone /></a>
+            <a href="#" aria-label="Instagram"><FaInstagram size={18} /></a>
+            <a href="#" aria-label="Email"><FaEnvelope size={18} /></a>
+            <a href="https://wa.me/6281234567890" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={18} /></a>
           </div>
         </div>
 

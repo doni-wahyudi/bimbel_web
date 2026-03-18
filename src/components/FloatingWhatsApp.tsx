@@ -1,4 +1,4 @@
-import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import './FloatingWhatsApp.css';
 
 const FloatingWhatsApp = () => {
@@ -14,7 +14,7 @@ const FloatingWhatsApp = () => {
       className="floating-whatsapp"
       aria-label="Chat via WhatsApp"
     >
-      <MessageCircle size={32} />
+      <FaWhatsapp size={32} />
       <span className="tooltip">Konsultasi Gratis</span>
     </a>
   );
