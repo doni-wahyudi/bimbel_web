@@ -1,6 +1,6 @@
 import { CheckCircle2, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroImage from '../../assets/hero.png';
+import home2 from '../../assets/student/home_2.png';
 import './AboutPreview.css';
 
 const AboutPreview = () => {
@@ -24,7 +24,7 @@ const AboutPreview = () => {
               <div className="about-glow-effect"></div>
               
               <div className="about-main-image glass-panel">
-                <img src={heroImage} alt="Kegiatan Siswa Teladan" className="about-img-full" />
+                <img src={home2} alt="Kegiatan Siswa Teladan" className="about-img-full" />
               </div>
               
               <div className="experience-badge glass-card-tech">

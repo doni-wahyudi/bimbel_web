@@ -1,3 +1,7 @@
+import img1 from '../assets/article_image/IMG_3864.JPG.jpeg';
+import img2 from '../assets/article_image/IMG_3865.JPG.jpeg';
+import img3 from '../assets/article_image/IMG_3867.JPG.jpeg';
+
 export interface Article {
   id: string;
   slug: string;
@@ -24,7 +28,7 @@ export const articles: Article[] = [
     ],
     date: "15 Maret 2026",
     author: "Tim Akademik Siswa Teladan",
-    image: "/article-1.jpg", 
+    image: img1, 
     keywords: "bimbingan belajar, bimbel SD, kesuksesan akademik, metode belajar, persiapan ujian, bimbel Jakarta, pentingnya les privat"
   },
   {
@@ -41,7 +45,7 @@ export const articles: Article[] = [
     ],
     date: "10 Maret 2026",
     author: "Tim Konselor Karier Siswa Teladan",
-    image: "/article-2.jpg",
+    image: img2,
     keywords: "strategi lulus UTBK 2026, persiapan SNBT, bimbel UTBK, tryout UTBK gratis, lolos PTN favorit, soal HOTS, penalaran umum"
   },
   {
@@ -57,7 +61,7 @@ export const articles: Article[] = [
     ],
     date: "05 Maret 2026",
     author: "Direktur Akademik Siswa Teladan",
-    image: "/article-3.jpg",
+    image: img3,
     keywords: "pendidikan karakter, bimbel anak, metode belajar interaktif, kedisiplinan siswa, kolaborasi belajar, bimbingan belajar holistik"
   }
 ];

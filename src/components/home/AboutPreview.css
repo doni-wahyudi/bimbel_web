@@ -27,7 +27,7 @@
 .about-image-wrapper {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  max-width: 550px;
   margin: 0 auto;
 }
 
@@ -45,26 +45,34 @@
 
 .about-main-image {
   position: relative;
-  border-radius: 24px;
-  overflow: hidden;
-  z-index: 1;
-}
-
-.glass-panel {
+  border-radius: 30px;
   background: rgba(15, 23, 42, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(30, 208, 207, 0.4);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(12px);
-  padding: 12px;
-  /* Pad the image inside the panel */
+  padding: 0;
+  z-index: 1;
+  aspect-ratio: 4 / 5;
+  /* Strong portrait ratio */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .about-img-full {
-  width: 100%;
-  height: auto;
-  border-radius: 16px;
-  object-fit: cover;
+  position: absolute;
+  height: 140%;
+  /* Drastically scale up to combat transparent internal padding */
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  bottom: -14.1%;
+  /* Pull the image down to snap the subject's torso to the outline */
+  left: 50%;
+  transform: translateX(-50%);
   display: block;
+  z-index: 2;
+  filter: drop-shadow(-10px 20px 40px rgba(0, 0, 0, 0.5));
 }
 
 .glass-card-tech {

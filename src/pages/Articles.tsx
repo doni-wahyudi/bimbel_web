@@ -27,10 +27,12 @@ const Articles = () => {
             {articles.map((article) => (
               <article key={article.id} className="article-card-tech">
                 <div className="article-img-wrapper">
-                  {/* Using a placeholder gradient since real images aren't generated yet */}
-                  <div className="article-img-placeholder">
-                    <span className="text-cyan font-bold opacity-50 text-2xl">Bimbel Siswa Teladan</span>
-                  </div>
+                  <img 
+                    src={article.image} 
+                    alt={article.title} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                  />
                 </div>
                 <div className="article-content">
                   <div className="article-meta">

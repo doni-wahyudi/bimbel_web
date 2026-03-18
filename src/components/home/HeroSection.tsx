@@ -1,6 +1,6 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import studentImage from '../../assets/student_image.png';
+import home1 from '../../assets/student/home_1.png';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -48,7 +48,9 @@ const HeroSection = () => {
         </div>
         
         <div className="hero-image-wrapper animate-fade-in" style={{ animationDelay: '200ms' }}>
-          <img src={studentImage} alt="Siswa Teladan" className="hero-student-img" />
+          <div className="hero-image-card">
+            <img src={home1} alt="Siswa Teladan" className="hero-student-img img-main" />
+          </div>
         </div>
       </div>
     </section>

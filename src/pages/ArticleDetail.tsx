@@ -57,9 +57,12 @@ const ArticleDetail = () => {
           <article className="article-content-wrapper glass-panel-tech">
             {/* Main Image */}
             <div className="article-hero-img-wrapper mb-10">
-              <div className="article-hero-placeholder">
-                <span className="text-cyan font-bold opacity-50 text-3xl">Bimbel Siswa Teladan</span>
-              </div>
+              <img 
+                src={article.image} 
+                alt={article.title} 
+                className="w-full h-full object-cover"
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
             </div>
 
             {/* SEO Summary/Excerpt lead */}

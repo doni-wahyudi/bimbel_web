@@ -2,12 +2,14 @@ import CTASection from '../components/home/CTASection';
 import './Gallery.css';
 
 // Import our new AI-generated tech-themed images
-import gallery1 from '../assets/gallery_1.png';
-import gallery2 from '../assets/gallery_2.png';
-import gallery3 from '../assets/gallery_3.png';
-import gallery4 from '../assets/gallery_4.png';
-import gallery5 from '../assets/gallery_5.png';
-import gallery6 from '../assets/gallery_6.png';
+import gallery1 from '../assets/gallery/15-1.png';
+import gallery2 from '../assets/gallery/15-2.png';
+import gallery3 from '../assets/gallery/16-1.png';
+import gallery4 from '../assets/gallery/16-2.png';
+import gallery5 from '../assets/gallery/17-1.png';
+import gallery6 from '../assets/gallery/17-2.png';
+import gallery7 from '../assets/gallery/18-1.png';
+import gallery8 from '../assets/gallery/18-2.png';
 
 const Gallery = () => {
   const images = [
@@ -17,6 +19,8 @@ const Gallery = () => {
     { src: gallery4, title: 'Belajar Kelompok Cerdas', category: 'Kegiatan Belajar' },
     { src: gallery5, title: 'Seminar Persiapan UTBK', category: 'Seminar' },
     { src: gallery6, title: 'Diskusi bersama Tutor', category: 'Kegiatan Belajar' },
+    { src: gallery7, title: 'Keakraban Siswa', category: 'Kebersamaan' },
+    { src: gallery8, title: 'Kelas Intensif', category: 'Fasilitas' },
   ];
 
   return (
