@@ -7,7 +7,7 @@ const About = () => {
     <div className="about-page animate-fade-in">
       {/* Header Section */}
       <section className="about-header-section">
-        <div className="container">
+        <div className="container about-header-content">
           <h1 className="tech-heading-lg text-gradient-cyan">Tentang Siswa Teladan</h1>
           <p className="about-subtitle">
             Membangun generasi cerdas, berkarakter, dan siap menghadapi tantangan masa depan.

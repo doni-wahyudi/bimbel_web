@@ -432,11 +432,7 @@
     max-width: unset;
   }
 
-  .img-main {
-    height: 145%;
-    width: auto;
-    bottom: -10%;
-  }
+
 
   .floating-card {
     padding: 12px 16px;
