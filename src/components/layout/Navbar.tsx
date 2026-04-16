@@ -37,7 +37,7 @@ const Navbar = () => {
         {/* Logo Area */}
         <Link to="/" className="brand-tech" onClick={closeMenu}>
           <div className="brand-icon-wrapper">
-            <Sparkles size={20} className="text-cyan" />
+            <img src="/favicon.png" alt="Siswa Teladan" className="brand-logo-img" />
           </div>
           <span className="brand-text-tech">Siswa Teladan</span>
         </Link>

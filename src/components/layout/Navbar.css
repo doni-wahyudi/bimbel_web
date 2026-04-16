@@ -43,6 +43,13 @@
   border: 1px solid rgba(30, 208, 207, 0.3);
 }
 
+.brand-logo-img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 4px rgba(30, 208, 207, 0.3));
+}
+
 .brand-text-tech {
   color: #FFFFFF;
   font-weight: 800;
