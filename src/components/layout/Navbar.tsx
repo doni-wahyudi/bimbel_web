@@ -59,7 +59,7 @@ const Navbar = () => {
 
           {/* Right CTA */}
           <div className="nav-right">
-              {user ? (
+              {user && (
                 <div className="nav-user-actions">
                   <Link to="/dashboard" className="nav-link-tech active flex-center gap-2">
                     <User size={16} /> Dashboard
@@ -68,8 +68,6 @@ const Navbar = () => {
                     <LogOut size={18} />
                   </button>
                 </div>
-              ) : (
-                <Link to="/login" className="nav-link-tech">Login</Link>
               )}
               <a 
                 href="https://wa.me/6281234567890?text=Halo%20Siswa%20Teladan..." 
@@ -109,13 +107,11 @@ const Navbar = () => {
             
             <div className="mobile-nav-divider"></div>
             
-            {user ? (
+            {user && (
               <>
                 <Link to="/dashboard" className="mobile-nav-link-tech" onClick={closeMenu}>Dashboard</Link>
                 <button onClick={() => { signOut(); closeMenu(); }} className="btn-pill-glass w-full justify-center">Keluar</button>
               </>
-            ) : (
-              <Link to="/login" className="mobile-nav-link-tech" onClick={closeMenu}>Login Akun</Link>
             )}
             
             <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" className="btn-pill-cyan w-full justify-center mt-4" onClick={closeMenu}>
